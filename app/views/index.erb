@@ -4,15 +4,22 @@
     <title>CommunityLinks</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style2.css">
+    <style>
+      .carousel-inner > .item > img,
+      .carousel-inner > .item > a > img {
+          width: 70%;
+          margin: auto;
+      }
+    </style>
   </head>
   <body>
-  <ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="/">Home</a></li>
-    <li role="presentation"><a href="/aboutus">About Us</a></li>
-    <li role="presentation"><a href="/people">People</a></li>
-    <li role="presentation" style="float: right;"><a href="/contactus">Contact Us</a></li>
-    <li role="presentation" style="float: right;"><a href="/signup">Sign Up</a></li>
-  </ul>
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active"><a href="/">Home</a></li>
+      <li role="presentation"><a href="/aboutus">About Us</a></li>
+      <li role="presentation"><a href="/people">People</a></li>
+      <li role="presentation" style="float: right;"><a href="/contactus">Contact Us</a></li>
+      <li role="presentation" style="float: right;"><a href="/signup">Sign Up</a></li>
+    </ul>
     <div class="container">
       <div class="jumbotron">
         <h3>Welcome to Community Links!</h3>
@@ -35,6 +42,34 @@
           </div>
           <a class="btn btn-default" href="#" role="button">Sign In</a>
         </form>
+        <p></p>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="http://i.telegraph.co.uk/multimedia/archive/03519/potd-squirrel_3519920k.jpg" alt="Chania" width="460" height="345">
+            </div>
+
+            <div class="item">
+              <img src="https://i.ytimg.com/vi/qh7LLydY8eo/maxresdefault.jpg" alt="Chania" width="460" height="345">
+            </div>
+          
+            <div class="item">
+              <img src="http://media3.s-nbcnews.com/j/newscms/2016_32/1665641/ss-160812-twip-02_3380f5e9d30b766138155f8c3f11f9a8.nbcnews-fp-1200-800.jpg" alt="Flower" width="460" height="345">
+            </div>
+
+            <div class="item">
+              <img src="http://i.telegraph.co.uk/multimedia/archive/03597/POTD_chick_3597497k.jpg" alt="Flower" width="460" height="345">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
