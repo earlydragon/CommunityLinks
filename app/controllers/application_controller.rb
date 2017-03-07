@@ -14,8 +14,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end 
 
-  get '/aboutus' do
-    #@items = Item.all   		
+  get '/aboutus' do  		
   	erb :aboutus
   end 
 
@@ -34,12 +33,5 @@ class ApplicationController < Sinatra::Base
   get '/backtohome' do    
     erb :backtohome
   end 
-
-
-  #post '/cart' do
-  #new_merch = Merch.new({:merch => params[:merch], :count => params[:count], :cost => params[:cost]})
-  #new_merch.save
-  #redirect ('/cart')
-  #end 
 
 end
