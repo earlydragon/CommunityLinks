@@ -3,24 +3,35 @@
   <head>
     <title>Sign Up</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/style1.css">
+    <link rel="stylesheet" type="text/css" href="#">
   </head>
   <body>
-<ul class="nav nav-pills">
-  <li role="presentation"><a href="/">Home</a></li>
-  <li role="presentation"><a href="/aboutus">About Us</a></li>
-  <li role="presentation"><a href="/people">People</a></li>
-  <li role="presentation" style="float: right;"><a href="/contactus">Contact Us</a></li>
-  <li role="presentation" class="active" style="float: right;"><a href="/signup">Sign Up</a></li>
-</ul>
+    <ul class="nav nav-pills">
+      <li role="presentation" style="float: right;"><a href="/contactus">Contact Us</a></li>
+      <li role="presentation" style="float: right;"><a href="/donate">Donate</a></li>
+      <li role="presentation" style="float: right;"><a href="/aboutus">About Us</a></li>
+      <li role="presentation" style="float: right;"><a href="/people">People</a></li>
+      <li role="presentation" style="float: right;" class="active"><a href="/signup">Sign Up</a></li>
+      <li role="presentation" style="float: right;"><a href="/signin">Sign In</a></li>
+      <li role="presentation" style="float: right;"><a href="/">Home</a></li>
+      <a class="navbar-brand" href="/" style="color: orange">CommunityLinks</a>
+    </ul>
     <div class="container">
       <h1>Sign Up Here</h1><br>
+
+      <div class="btn-group" role="group" aria-label="...">
+        <a class="btn btn-default active" href="/signup" role="button">Student</a>
+        <a class="btn btn-default" href="/signupcharity" role="button">Charity</a>
+        <a class="btn btn-default" href="/signupschool" role="button">School</a>
+      </div>
+      <p></p>
+
       <form class="form-inline">
         <div class="form-group">
           <input type="email" class="form-control" id="exampleInputEmail3" placeholder="First Name">
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Last Name">
+          <input type="email" class="form-control" id="exampleInputPassword3" placeholder="Last Name">
         </div>
       </form>
       <p> </p>
@@ -128,7 +139,7 @@
           <input type="radio" name="gender" value="male" checked> Male<br>
           <input type="radio" name="gender" value="female"> Female<br><br>
         </form>
-        <a class="btn btn-default" href="/backtohome" role="button">Submit</a>
+        <a class="btn btn-default" href="/studenthome" role="button">Submit</a>
       </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

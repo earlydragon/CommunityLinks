@@ -30,8 +30,63 @@ class ApplicationController < Sinatra::Base
     erb :contactus
   end 
 
-  get '/backtohome' do    
-    erb :backtohome
+  get '/signupcharity' do    
+    erb :signupcharity
   end 
+
+  get '/signupschool' do    
+    erb :signupschool
+  end 
+
+  get '/signin' do    
+    erb :signin
+  end 
+
+  get '/donate' do    
+    erb :donate
+  end 
+
+  get '/returntohome' do    
+    erb :returntohome
+  end 
+
+  get '/studenthome' do    
+    erb :studenthome
+  end 
+
+  get '/charityhome' do    
+    erb :charityhome
+  end 
+
+  get '/schoolhome' do    
+    erb :schoolhome
+  end 
+
+  get '/directions' do    
+    erb :directions
+  end 
+
+  get '/charity' do    
+    erb :charity
+  end 
+
+  get '/postevents' do    
+    erb :postevents
+  end 
+
+  get '/studentlist' do    
+    erb :studentlist
+  end 
+
+  post '/studenthome' do
+    if "Student" == params[:type]
+      redirect ('/studenthome')
+    elsif "Charity" == params[:type]
+      redirect ('/charityhome')
+    else
+      redirect ('/schoolhome')
+  end
+
+end 
 
 end

@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CommunityLinks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="#">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Water',     4],
+          ['Hours Left',     5],
+          ['School',      2],
+          ['Soup Kitchen',  9],
+          ['Playground', 2],
+          ['Garden',    7]
+        ]);
+
+        var options = {
+          title: 'Charity Work'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+  </head>
+  <body>
+  	<nav class="navbar navbar-default navbar-fixed-top">
+  		<div class="container-fluid">
+			<ul class="nav nav-pills">
+				<a class="navbar-brand" href="/" style="color: orange">CommunityLinks</a>
+				<li role="presentation" class="active" style="float: right;"><a href="#">Profile</a></li>
+				<li role="presentation" style="float: right;"><a href="#">Calender</a></li>
+				<button class="btn btn-primary" type="button" style="float: right; margin-top: 4px;">
+				  Messages <span class="badge">4</span>
+				</button>
+			    <li role="presentation" style="float: right;"><a href="#">Charities</a></li>
+		    	<li role="presentation" style="float: right;"><a href="#">Directories</a></li>
+				<li role="presentation" class="dropdown" style="float: right;">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Groups <span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Collegiate</a></li>
+			        <li><a href="#">Friend Group</a></li>
+			        <li><a href="#">Friend Group 1</a></li>
+				</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="jumbotron" style="background-color: white;">
+		<div class="row">
+			<div class="col-md-6" style="width: 700px; height: 500px; border: 1px solid black;">
+				<div id="piechart" style="width: 650px; height: 400px;"></div>
+				<p></p>
+				<a class="btn btn-primary btn-lg" href="/charity" role="button">Find a Charity</a>
+			</div>
+
+			<div class="col-md-6" style="width: 710px; height: 150px; border: 1px solid black;">
+				<p></p>
+				<p>Attendance Summary</p>
+				<div class="col-md-3">
+					<p>Absences</p>
+					<h4>2</h4>
+				</div>
+				<div class="col-md-4">
+					<p>Hours Completed</p>
+					<h4>24</h4>
+				</div>
+				<div class="col-md-3">
+					<p>Hours Left</p>
+					<h4>5</h4>
+				</div>
+			</div>
+
+			<div class="col-md-6" style="width: 710px; height: 350px; border: 1px solid black;">
+				<p></p>
+				<p>Recent Past Events</p>
+				<table class="table table-striped">
+				  <thead>
+				  	<tr>
+				  		<th>Date</th>
+				  		<th>Event</th>
+				  		<th>Location</th>
+				  		<th>Hours Completed</th>
+				  		<th>Contact</th>
+				  	</tr>
+				  </thead>
+				  <tbody>
+				  	<tr>
+				  		<th>2/17/17</th>
+				  		<th>Soup Kitchen</th>
+				  		<th>Brooklyn</th>
+				  		<th>2</th>
+				  		<th>soupkitchen@gmail.com</th>
+				  	</tr>
+				  	<tr>
+				  		<th>2/24/17</th>
+				  		<th>Park Cleanup</th>
+				  		<th>Central Park</th>
+				  		<th>4</th>
+				  		<th>park@gmail.com</th>
+				  	</tr>
+				  	<tr>
+				  		<th>3/4/17</th>
+				  		<th>Tutoring</th>
+				  		<th>Collegiate School</th>
+				  		<th>1</th>
+				  		<th>collegiateschool@gmail.com</th>
+				  	</tr>
+				  	<tr>
+				  		<th>3/14/17</th>
+				  		<th>Soup Kitchen</th>
+				  		<th>Manhattan</th>
+				  		<th>3</th>
+				  		<th>soupkitchen1@gmail.com</th>
+				  	</tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6" style="width: 700px; height: 375px; border: 1px solid black;">
+				<p></p>
+				<p>Upcoming Events</p>
+				<table class="table table-striped">
+				  <thead>
+				  	<tr>
+				  		<th>Date</th>
+				  		<th>Event</th>
+				  		<th>Location</th>
+				  		<th>Directions</th>
+				  		<th>Hours</th>
+				  		<th>Contact</th>
+				  	</tr>
+				  </thead>
+				  <tbody>
+				  	<tr>
+				  		<th>4/20/17</th>
+				  		<th>Bake Sale</th>
+				  		<th>Manhattan</th>
+				  		<th><a href="/directions">Direction</a></th>
+				  		<th>1:00 PM - 4:00 PM</th>
+				  		<th>bakesale@gmail.com</th>
+				  	</tr>
+				  	<tr>
+				  		<th>4/27/17</th>
+				  		<th>Gardening</th>
+				  		<th>80th and Park</th>
+				  		<th><a href="/directions">Direction</a></th>
+				  		<th>11:00 AM - 1:00 PM</th>
+				  		<th>gardening@gmail.com</th>
+				  	</tr>
+				  	<tr>
+				  		<th>5/1/17</th>
+				  		<th>Babysitting</th>
+				  		<th>19th and Broadway</th>
+				  		<th><a href="/directions">Direction</a></th>
+				  		<th>7:00 PM - 11:00 PM</th>
+				  		<th>babysitting@gmail.com</th>
+				  	</tr>
+				  	<tr>
+				  		<th>5/6/17</th>
+				  		<th>Soup Kitchen</th>
+				  		<th>Brooklyn</th>
+				  		<th><a href="/directions">Direction</a></th>
+				  		<th>3:00 PM - 6:00 PM</th>
+				  		<th>soupkitchen3@gmail.com</th>
+				  	</tr>
+				  </tbody>
+				</table>
+			</div>
+
+			<div class="col-md-6" style="width: 710px; height: 375px; border: 1px solid black;">
+				<p></p>
+				<p>Suggested Events</p>
+				<table class="table table-striped">
+				  <thead>
+				  	<tr>
+				  		<th>Date</th>
+				  		<th>Event</th>
+				  		<th>Location</th>
+				  		<th>Directions</th>
+				  		<th>Hours</th>
+				  		<th>Contact</th>
+				  		<th>Apply</th>
+				  	</tr>
+				  </thead>
+				  <tbody>
+				  	<tr>
+				  		<th>4/20/17</th>
+				  		<th>Bake Sale</th>
+				  		<th>Manhattan</th>
+				  		<th><a href="/directions">Direction</a></th>
+				  		<th>3:30 PM - 6:30 PM</th>
+				  		<th>bakesale@gmail.com</th>
+				  		<th><a href="#">Apply</a></th>
+				  	</tr>
+				  	<tr>
+				  		<th>4/27/17</th>
+				  		<th>Gardening</th>
+				  		<th>80th and Park</th>
+				  		<th><a href="/directions">Direction</a></th>
+				  		<th>2:00 PM - 4:00 PM</th>
+				  		<th>gardening@gmail.com</th>
+				  		<th><a href="#">Apply</a></th>
+				  	</tr>
+				  	<tr>
+				  		<th>5/1/17</th>
+				  		<th>Babysitting</th>
+				  		<th>19th and Broadway</th>
+				  		<th><a href="/directions">Direction</a></th>
+				  		<th>6:00 PM - 10:00 PM</th>
+				  		<th>babysitting@gmail.com</th>
+				  		<th><a href="#">Apply</a></th>
+				  	</tr>
+				  	<tr>
+				  		<th>5/6/17</th>
+				  		<th>Soup Kitchen</th>
+				  		<th>Brooklyn</th>
+				  		<th><a href="/directions">Direction</a></th>
+				  		<th>9:00 AM - 12:30 PM</th>
+				  		<th>soupkitchen3@gmail.com</th>
+				  		<th><a href="#">Apply</a></th>
+				  	</tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
