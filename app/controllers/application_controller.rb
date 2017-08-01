@@ -86,7 +86,7 @@ class ApplicationController < Sinatra::Base
     else
       redirect ('/schoolhome')
   end
-// hey
+
 end 
 
 end
