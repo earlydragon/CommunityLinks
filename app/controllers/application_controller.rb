@@ -62,6 +62,8 @@ class ApplicationController < Sinatra::Base
     erb :schoolhome
   end 
 
+//hello
+
   get '/directions' do    
     erb :directions
   end 
