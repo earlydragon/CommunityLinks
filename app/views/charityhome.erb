@@ -4,31 +4,93 @@
     <title>CommunityLinks</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="#">
+
+    <style>
+       /* Navigation */
+      .navigation {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        padding: 0 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+      }
+       
+      .navigation-right {
+        margin-left: -33px;
+      }
+       
+      .navigation-right a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #333745;
+        font-size: 12px;
+        font-weight: bold;
+        width: 107px;
+        height: 30px;
+        border: 2px solid transparent;
+        border-radius: 15px;
+        display: inline-block;
+        text-align: center;
+        line-height: 25px;
+        transition: all .2s;
+      }
+       
+      .navigation-right a:hover,
+      .navigation-right a:focus {
+        border-color: rgb(234, 46, 73);
+        background-color: rgba(44, 45, 47, 0);
+      }
+       
+      .navigation-left {
+        margin-right: 85px;
+      }
+
+      .css-slider-wrapper {
+        display: block;
+        background: #FFF;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+
+      .navigation-center {
+        display: flex;
+        margin-left: 534px;
+      }
+    </style>  
+
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-  		<div class="container-fluid">
-			<ul class="nav nav-pills">
-				<li role="presentation"  class="active"  style="float: right;"><a href="#">Home</a></li>
-				<a class="navbar-brand" href="/" style="color: orange">CommunityLinks</a>
-				<li role="presentation" style="float: right;"><a href="#">Profile</a></li>
-				<button class="btn btn-primary" type="button" style="float: right; margin-top: 4px;">
-				  Messages <span class="badge">2</span>
-				</button>
-				<li role="presentation" style="float: right;"><a href="/postevents">Post Events</a></li>
-		</div>
-	</nav>
+    <nav class="navbar navbar-default" style="background-color: white; border-color:white">
+    <div class="navigation">
+      <div class="navigation-right">
+        <a href="#">Post Events</a>
+        <a href="#">Home</a>
+        <a href="#">Messages&nbsp;<span class="badge">3</span></a>
+        <a href="#">Profile</a>
+      </div>
+      <div class="navigation-left">
+        <a class="navbar-brand" href="/" style="color: orange">CommunityLinks</a>
+      </div>
+    </div>
+  </nav>
+			<div>
+				<div class="jumbotron" style="background-color: white;">
 
-	<div class="jumbotron" style="background-color: white;">
 				<nav aria-label="...">
   					<ul class="pager">
 				    	<li><a href="#">Previous Day</a></li>
-				    	&nbsp<strong>November 23, 2017</strong>&nbsp
+				    	&nbsp<strong>Sepetember 1, 2017</strong>&nbsp
 				    	<li><a href="#">Next Day</a></li>
 				  	</ul>
-				</nav>
+				 	</nav>
 				<p></p>
-				<p>Today's Events</p>
 				<table class="table table-striped">
 				  <thead>
 				  	<tr>
@@ -77,6 +139,7 @@
 				</table>
 			</div>
 		</div>
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
