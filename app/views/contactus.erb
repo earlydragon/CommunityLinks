@@ -4,6 +4,9 @@
     <title>Contact Us</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="#">
+     <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu-f2oCf6dsP4xZ-QI5KvarIiPHsuG8Y0" type="text/javascript"></script>
+    
 
     <style>
        /* Navigation */
@@ -110,6 +113,36 @@
       </div>
     </nav>
 
+    <div id="map" style="width: 100%; height: 300px;"></div>
+    <script type="text/javascript">
+    var locations = [
+      ['Collegiate School', 40.7833524, -73.9834678, 17]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: new google.maps.LatLng(40.7833524, -73.9834678),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
     <div class="container">
       <h1>Contact Us</h1>
       <br>
