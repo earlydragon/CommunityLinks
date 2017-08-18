@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="#">
+     <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu-f2oCf6dsP4xZ-QI5KvarIiPHsuG8Y0" type="text/javascript"></script>
+    
+
+    <style>
+       /* Navigation */
+      .navigation {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        padding: 0 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+      }
+       
+      .navigation-left {
+        margin-left: -33px;
+      }
+       
+      .navigation-left a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #333745;
+        font-size: 12px;
+        font-weight: bold;
+        width: 107px;
+        height: 30px;
+        border: 2px solid transparent;
+        border-radius: 15px;
+        display: inline-block;
+        text-align: center;
+        line-height: 25px;
+        transition: all .2s;
+      }
+       
+      .navigation-left a:hover,
+      .navigation-left a:focus {
+        border-color: rgb(234, 46, 73);
+        background-color: rgba(44, 45, 47, 0);
+      }
+       
+      .navigation-center {
+        margin-right: 85px;
+      }
+       
+      .navigation-right {
+        display: flex;
+        align-items: center;
+      }
+       
+      .login-btn {
+        background-color: #b8b8b9;
+        width: 97px;
+        height: 30px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 15px;
+        border: none;
+        color: #333745;
+        text-transform: uppercase;
+        margin-left: 20px;
+        transition: all .2s;
+        cursor: pointer;
+      }
+      .login-btn:hover {
+        transform: scale(1.06);
+      }
+
+      .css-slider-wrapper {
+        display: block;
+        background: #FFF;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+    </style>  
+
+  </head>
+
+  
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" style="background-color: white; border-color:white">
+      <div class="navigation">
+        <div class="navigation-left">
+          <a href="/contactus">Contact Us</a>
+          <a href="/donate">Donate</a>
+          <a href="/aboutus">About Us</a>
+          <a href="/people">People</a>
+          <a href="/signup">Sign Up</a>
+          <a href="/">Home</a>
+        </div>
+        <div class="navigation-center">
+          <a class="navbar-brand" href="/" style="color: orange">CommunityLinks</a>
+        </div>
+        <div class="navigation-right">
+          <button class="login-btn" role="button"><a href="/signin" style="color: black"> Login</a></button>
+        </div>
+      </div>
+    </nav>
+
+    <div id="map" style="width: 100%; height: 300px;"></div>
+
+    <script type="text/javascript">
+    var locations = [
+      ['Collegiate School', 40.7833524, -73.9834678, 17]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      center: new google.maps.LatLng(40.7833524, -73.9834678),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
+    <div class="container">
+      <br>
+      <br>
+      <address>
+        <strong>Community Links, Inc.</strong><br>
+        260 W 78th St<br>
+        New York, NY 10024<br>
+        <abbr title="Phone">P:</abbr> (917) 971-7331
+      </address>
+
+      <address>
+        <strong>Email</strong><br>
+        <a href="mailto:communitylinks2017@gmail.com">communitylinks2017@gmail.com</a>
+      </address>
+
+      <address>
+        <strong>Social Media</strong><br>
+        <a href="https://www.facebook.com/CommunityLinks-182198768957987/?notif_t=page_admin&notif_id=1491070336233822" target="_blank">Facebook</a><br>
+        <a href="https://twitter.com/CommunityLinks7" target="_blank">Twitter</a>
+      </address>
+      <img src="https://lh5.googleusercontent.com/O0FlxvpksHgK3-Gq27P-gfs3I8xPGBQznT3o6ES_XXNSppUUGh7ama4dWCl8imL-kioK92ppcY4FPw7eTkoGmS1aGWGoUiX00-1p3tPVC9_YW1CYIRbCWJjDQpULeULKvcAzkgfva18" alt="Mountain View" style="width:304px;height:228px;">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CommunityLinks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="#">
+
+    <style>
+
+      body {
+        background-image: url("http://cdn.wallpapersafari.com/87/93/jniVCq.jpg");
+      }
+       /* Navigation */
+      .navigation {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        padding: 0 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+      }
+       
+      .navigation-left {
+        margin-left: -33px;
+      }
+       
+      .navigation-left a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #333745;
+        font-size: 12px;
+        font-weight: bold;
+        width: 107px;
+        height: 30px;
+        border: 2px solid transparent;
+        border-radius: 15px;
+        display: inline-block;
+        text-align: center;
+        line-height: 25px;
+        transition: all .2s;
+      }
+       
+      .navigation-left a:hover,
+      .navigation-left a:focus {
+        border-color: rgb(234, 46, 73);
+        background-color: rgba(44, 45, 47, 0);
+      }
+       
+      .navigation-center {
+        margin-right: 85px;
+      }
+       
+      .navigation-right {
+        display: flex;
+        align-items: center;
+      }
+       
+      .login-btn {
+        background-color: #b8b8b9;
+        width: 97px;
+        height: 30px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 15px;
+        border: none;
+        color: #333745;
+        text-transform: uppercase;
+        margin-left: 20px;
+        transition: all .2s;
+        cursor: pointer;
+      }
+      .login-btn:hover {
+        transform: scale(1.06);
+      }
+
+      .css-slider-wrapper {
+        display: block;
+        background: #FFF;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+    </style>  
+
+  </head>
+  <body>
+
+    <div class="navigation">
+      <div class="navigation-left">
+        <a href="/contactus">Contact Us</a>
+        <a href="/donate">Donate</a>
+        <a href="/aboutus">About Us</a>
+        <a href="/people">People</a>
+        <a href="/signup">Sign Up</a>
+        <a href="/">Home</a>
+      </div>
+      <div class="navigation-center">
+        <a class="navbar-brand" href="/" style="color: orange">CommunityLinks</a>
+      </div>
+      <div class="navigation-right">
+        <button class="login-btn" role="button"><a href="/signin" style="color: black"> Login</a></button>
+      </div>
+    </div>
+
+
+    <div class="jumbotron" style= "
+      width: 560px;
+      position: fixed;
+      top: 45%;
+      left: 45%;
+      margin-top: -100px;
+      margin-left: -200px;">
+      <h4>CommunityLinks</h4>
+      <form action="/studenthome" method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="checkbox" style="float: right;">
+          <label>
+            <input type="checkbox"> Remember me
+          </label>
+        </div>
+        <select class="form-control" style="width: 77px;" name="type">
+            <option>Student</option>
+            <option>Charity</option>
+            <option>School</option>
+        </select>
+        <p></p>
+        <input type="submit" class="btn btn-default">
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

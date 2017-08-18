@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CommunityLinks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="#">
+
+    <style>
+       /* Navigation */
+      .navigation {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        padding: 0 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+      }
+       
+      .navigation-right {
+        margin-left: -33px;
+      }
+       
+      .navigation-right a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #333745;
+        font-size: 12px;
+        font-weight: bold;
+        width: 107px;
+        height: 30px;
+        border: 2px solid transparent;
+        border-radius: 15px;
+        display: inline-block;
+        text-align: center;
+        line-height: 25px;
+        transition: all .2s;
+      }
+       
+      .navigation-right a:hover,
+      .navigation-right a:focus {
+        border-color: rgb(234, 46, 73);
+        background-color: rgba(44, 45, 47, 0);
+      }
+       
+      .navigation-left {
+        margin-right: 85px;
+      }
+
+      .css-slider-wrapper {
+        display: block;
+        background: #FFF;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+
+      .navigation-center {
+        display: flex;
+        margin-left: 534px;
+      }
+    </style>  
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default" style="background-color: white; border-color:white">
+    <div class="navigation">
+      <div class="navigation-right">
+        <a href="#">Post Events</a>
+        <a href="#">Home</a>
+        <a href="#">Messages&nbsp;<span class="badge">3</span></a>
+        <a href="#">Profile</a>
+      </div>
+      <div class="navigation-left">
+        <a class="navbar-brand" href="/" style="color: orange">CommunityLinks</a>
+      </div>
+    </div>
+  </nav>
+			<div>
+				<div class="jumbotron" style="background-color: white;">
+
+				<nav aria-label="...">
+  					<ul class="pager">
+				    	<li><a href="#">Previous Day</a></li>
+				    	&nbsp<strong>Sepetember 1, 2017</strong>&nbsp
+				    	<li><a href="#">Next Day</a></li>
+				  	</ul>
+				 	</nav>
+				<p></p>
+				<table class="table table-striped">
+				  <thead>
+				  	<tr>
+				  		<th>Date</th>
+				  		<th>Event</th>
+				  		<th>Location</th>
+				  		<th>Time</th>
+				  		<th>Applicants</th>
+				  		<th>Edit</th>
+				  	</tr>
+				  </thead>
+				  <tbody>
+				  	<tr>
+				  		<th>11/23/17</th>
+				  		<th>Soup Kitchen #1</th>
+				  		<th>Brooklyn</th>
+				  		<th>10:00 AM - 1:00 PM</th>
+				  		<th><a href="#">Applicants</a></th>
+				  		<th><a href="#">Edit</a></th>
+				  	</tr>
+				  	<tr>
+				  		<th>11/23/17</th>
+				  		<th>Food Distribution</th>
+				  		<th>Brooklyn</th>
+				  		<th>2:00 PM - 3:30 PM</th>
+				  		<th><a href="#">Applicants</a></th>
+				  		<th><a href="#">Edit</a></th>
+				  	</tr>
+				  	<tr>
+				  		<th>11/23/17</th>
+				  		<th>Soup Kitchen #2</th>
+				  		<th>Brooklyn</th>
+				  		<th>4:00 PM - 6:00 PM</th>
+				  		<th><a href="#">Applicants</a></th>
+				  		<th><a href="#">Edit</a></th>
+				  	</tr>
+				  	<tr>
+				  		<th>11/23/17</th>
+				  		<th>Thanksgiving Dinner</th>
+				  		<th>Brooklyn</th>
+				  		<th>7:00 PM - 9:00 PM</th>
+				  		<th><a href="#">Applicants</a></th>
+				  		<th><a href="#">Edit</a></th>
+				  	</tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
