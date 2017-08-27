@@ -6,11 +6,7 @@ class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
-<<<<<<< HEAD
-      enable :sessions
-=======
     enable :sessions
->>>>>>> c17c9cbd7c80469221deef6a141b6b7e9d52f007
     set :session_secret, 'fwitter'
   end
 
@@ -81,6 +77,11 @@ class ApplicationController < Sinatra::Base
   get '/studentlist' do    
     erb :studentlist
   end 
+
+  get '/calendar' do    
+    erb :calendar
+  end
+
 
   post '/studenthome' do
     if "Student" == params[:type]
