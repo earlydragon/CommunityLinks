@@ -77,11 +77,15 @@ class ApplicationController < Sinatra::Base
   get '/studentlist' do    
     erb :studentlist
   end 
-
+  get '/insert_data.php' do
+    erb :calendar
+  end
   get '/calendar' do    
     erb :calendar
   end
-
+post '/insert_data.php' do
+  erb :calendar
+end
 
   post '/studenthome' do
     if "Student" == params[:type]

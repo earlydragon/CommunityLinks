@@ -4,7 +4,8 @@
     <title>CommunityLinks</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="#">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
     <style>
 
       body {
@@ -118,28 +119,14 @@
       margin-top: -100px;
       margin-left: -200px;">
       <h4>CommunityLinks</h4>
-      <form action="/studenthome" method="POST">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="checkbox" style="float: right;">
-          <label>
-            <input type="checkbox"> Remember me
-          </label>
-        </div>
-        <select class="form-control" style="width: 77px;" name="type">
-            <option>Student</option>
-            <option>Charity</option>
-            <option>School</option>
-        </select>
-        <p></p>
-        <input type="submit" class="btn btn-default">
-      </form>
+      <form action="insert_data.php" method="post">
+          <input type="Text" value="" placeholder="name" name="field1-name" />
+          <input type="Password" value="" placeholder="password" name="field2-name" />
+          <input type="Email" value="" placeholder="E-mail Address" name="field3-name" />
+          <input type="Text" value="" placeholder="sex" name="field4-name" />
+          <input type="Text" value="" placeholder="School" name="field5-name" />
+          <input type="Number" value="" placeholder="birth date" name="field6-name" />
+          <input type="Submit" /></form> 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

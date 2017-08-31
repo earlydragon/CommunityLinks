@@ -28,6 +28,14 @@ test:
   <<: *default
   database: User_Auth_test
 
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: User
+  pool: 5
+  username: Nate
+  password: '@l1I2N3K4S5'
+  socket: /tmp/mysql.sock
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
