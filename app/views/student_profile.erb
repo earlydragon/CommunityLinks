@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en"> 
+    <head> 
+
+	    <title>CommunityLinks</title>
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	    <link rel="stylesheet" type="text/css" href="#">
+        <meta http-equiv="content-type" content="text/html; charset=iso-8859-1"> 
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
+        
+
+	<style>
+       /* Navigation */
+      .navigation {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        padding: 0 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+      }
+       
+      .navigation-right {
+        margin-left: -33px;
+      }
+       
+      .navigation-right a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #333745;
+        font-size: 12px;
+        font-weight: bold;
+        width: 107px;
+        height: 30px;
+        border: 2px solid transparent;
+        border-radius: 15px;
+        display: inline-block;
+        text-align: center;
+        line-height: 25px;
+        transition: all .2s;
+      }
+       
+      .navigation-right a:hover,
+      .navigation-right a:focus {
+        border-color: rgb(234, 46, 73);
+        background-color: rgba(44, 45, 47, 0);
+      }
+       
+      .navigation-left {
+        margin-right: 85px;
+      }
+
+      .css-slider-wrapper {
+        display: block;
+        background: #FFF;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+      .navigation-center {
+        display: flex;
+        margin-left: 534px;
+      }
+    </style>
+   </head>
+   <body>
+    <nav class="navbar navbar-default" style="background-color: white; border-color:white">
+    <div class="navigation">
+      <div class="navigation-right">
+        <a href="/student_profile">Profile</a>
+        <a href="/calendar">Calendar</a>
+        <a href="#">Messages&nbsp;<span class="badge">3</span></a>
+        <a href="/charity">Charities</a>
+        <a href="#">Directories</a>
+        <a href="#">Home</a>
+        <div class="btn-group">
+		<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Groups <span class="caret"></span>
+		</a>
+			<ul class="dropdown-menu">
+				<li><a href="#">Collegiate</a></li>
+			    <li><a href="#">Trinity</a></li>
+			    <li><a href="#">Poly Prep</a></li>
+			</ul>
+		</div>
+      </div>
+      <div class="navigation-left">
+        <a class="navbar-brand" href="/" style="color: orange">CommunityLinks</a>
+      </div>
+    </div>
+  </nav> 
+         
+        <title>Upload form</title> 
+      
+     
+    <body> 
+     
+    <form id="Upload" action="<?php echo $uploadHandler ?>" enctype="multipart/form-data" method="post"> 
+     
+        <h1> 
+            Upload form 
+        </h1> 
+         
+        <p> 
+            <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $max_file_size ?>"> 
+        </p> 
+         
+        <p> 
+            <label for="file">File to upload:</label> 
+            <input id="file" type="file" name="file"> 
+        </p> 
+                 
+        <p> 
+            <label for="submit">Press to...</label> 
+            <input id="submit" type="submit" name="submit" value="Upload me!"> 
+        </p> 
+     
+    </form> 
+     
+     
+    </body> 
+
+</html> 

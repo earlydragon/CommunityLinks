@@ -83,6 +83,9 @@ class ApplicationController < Sinatra::Base
   get '/calendar' do    
     erb :calendar
   end
+  get '/student_profile' do
+    erb :student_profile
+  end
 post '/insert_data.php' do
   erb :calendar
 end
